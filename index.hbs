@@ -1,0 +1,56 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The big featured header }}
+{{#foreach posts}}
+    {{#if @first}}
+        <header class="main-header top-header {{#if @blog.cover}}" style="background-image:url({{image}}){{else}}no-cover{{/if}}">
+            <div class="image-overlay"></div>
+            <nav class="main-nav overlay clearfix">
+                {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+                {{#if @blog.navigation}}
+                    <a class="portfolio-name" href="{{@blog.url}}"><span class="word"><strong>{{@blog.title}}</strong></span></a>
+                    <a class="menu-button icon-menu" href="#"><span class="word"></span></a>
+                {{/if}}
+            </nav>
+            <div class="vertical">
+                <div class="top-header-content inner">
+                    <div class="top-header-post-content-title">
+                        <a href="{{url}}"><h1 class="page-title">{{title}}</h1></a>
+                    </div>
+                    <div class="top-header-post-content-description">
+                        <p class="page-description">{{excerpt words="36"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+                        <a href="{{url}}" alt="Read More" class="top-header-read-more">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+        </header>
+    {{/if}}
+{{/foreach}}
+<div class="row second-line">
+    {{#get "posts" limit="3"}}
+        {{#foreach posts from="2" to="3"}}
+            <div class="col-sm-12 col-md-6 second-line-{{@index}} {{#if @blog.cover}}" style="background-size:cover;background-image:url({{image}}){{else}}no-cover{{/if}}">
+                <a href="{{url}}">
+                    <div class="second-line-background">
+                        <div class="darker-image-overlay"></div>
+                        <div class="main-content">
+                            <a href="{{url}}"><h1>{{title}}</h1></a>
+                            <p class="second-line-paragraph">{{excerpt words="40"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {{/foreach}}
+    {{! will start at the 2nd post, and stop at the 5th, outputting 3 posts, providing the posts per page setting is at least 5}}
+    {{/get}}
+</div>
+
+{{! The main content area on the homepage }}
+<main id="content" class="content" role="main">
+
+    {{! The tag below includes the post loop - partials/loop.hbs }}
+    {{> "mainloop"}}
+
+</main>
