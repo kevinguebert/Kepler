@@ -21,8 +21,8 @@ Kepler is a Ghost theme built off of the default Ghost theme, [Casper](https://g
 
 ###Add a Featured Project
 
-1. Create a tag called **Featured Project**
-2. Create a new post, tag it with **Featured Project** - note, it looks best with an image!	
+1. Create a tag called **Featured**
+2. Create a new post, tag it with **Featured** - note, it looks best with an image!	
 
 
 ##Images
