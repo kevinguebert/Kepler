@@ -1,8 +1,24 @@
 # Kepler 
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/).
+Welcome to Kepler! 
 
-To download, visit the [releases](https://github.com/TryGhost/Casper/releases) page.
+Kepler is a Ghost theme built off of the default Ghost theme, [Casper](https://github.com/TryGhost/Casper/releases). Built around large front page images and the ability to have portfolio items, Kepler is fast, responsive, and can be used in a wide variety of situations.
+
+##Images
+
+####Homepage
+![./readme/screencapture-localhost-2368-1478223420254.png](Full Screen)
+
+####Mobile Homepage
+![readme/screencapture-localhost-2368-1478224081600.png](Mobile Homepage)
+
+####Post Page
+![readme/screencapture-localhost-2368-acadia-1478223454551.png](Posts Page)
+
+####Portfolio Page
+![readme/screencapture-localhost-2368-tag-portfolio-1478223530769.png](Portfolio Page)
+
+## Installation & Instruction
 
 ## Copyright & License
 
