@@ -7,7 +7,7 @@ Kepler is a Ghost theme built off of the default Ghost theme, [Casper](https://g
 
 ## Installation & Instruction
 
-1. Download the zip file of the latest release.
+1. [Download the zip file of the latest release.](https://github.com/kevinguebert/Kepler/releases/tag/0.1.0)
 2. Go to your Ghost Admin -> Settings -> General
 3. Scroll to the very bottom where it says "Themes" and click "Upload a theme"
 4. Drag the downloaded zip folder from step 1 to upload
