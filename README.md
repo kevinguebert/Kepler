@@ -7,16 +7,16 @@ Kepler is a Ghost theme built off of the default Ghost theme, [Casper](https://g
 ##Images
 
 ####Homepage
-![./readme/screencapture-localhost-2368-1478223420254.png](Full Screen)
+![Full Screen](./readme/screencapture-localhost-2368-1478223420254.png)
 
 ####Mobile Homepage
-![readme/screencapture-localhost-2368-1478224081600.png](Mobile Homepage)
+![Mobile Homepage](./readme/screencapture-localhost-2368-1478224081600.png)
 
 ####Post Page
-![readme/screencapture-localhost-2368-acadia-1478223454551.png](Posts Page)
+![Post Page](./readme/screencapture-localhost-2368-acadia-1478223454551.png)
 
 ####Portfolio Page
-![readme/screencapture-localhost-2368-tag-portfolio-1478223530769.png](Portfolio Page)
+![Portfolio Page](./readme/screencapture-localhost-2368-tag-portfolio-1478223530769.png)
 
 ## Installation & Instruction
 
