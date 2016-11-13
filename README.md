@@ -24,6 +24,16 @@ Kepler is a Ghost theme built off of the default Ghost theme, [Casper](https://g
 1. Create a tag called **Featured**
 2. Create a new post, tag it with **Featured** - note, it looks best with an image!	
 
+###Enable Disqus Support
+
+1. Create your disqus account by following these instructions: [http://academy.ghost.org/adding-disqus-to-your-ghost-blog/](http://academy.ghost.org/adding-disqus-to-your-ghost-blog/)
+2. Copy the `s.src` url and go to `post.hbs` and add it in the [disqus section](https://github.com/kevinguebert/Kepler/blob/master/post.hbs#L46)
+3. Copy the same url and go to `default.hbs` and update the `script` url [found here](https://github.com/kevinguebert/Kepler/blob/master/default.hbs#L55)
+
+### Enable Subscribers
+
+1. Head over to the Labs section of your blog and at the very bottom, enable subscribers to your website.
+2. Kepler automatically comes with a subscription page, so now just enjoy!
 
 ##Images
 
