@@ -38,13 +38,13 @@ Kepler is a Ghost theme built off of the default Ghost theme, [Casper](https://g
 ##Images
 
 ####Homepage
-![Full Screen](./readme/screencapture-localhost-2368-1478223420254.png)
+![Full Screen](https://github.com/kevinguebert/Kepler/blob/gh-pages/readme/screencapture-localhost-2368-1478223420254.png?raw=true)
 
 ####Post Page
-![Post Page](./readme/screencapture-localhost-2368-acadia-1478223454551.png)
+![Post Page](https://github.com/kevinguebert/Kepler/blob/gh-pages/readme/screencapture-localhost-2368-acadia-1478223454551.png?raw=true)
 
 ####Portfolio Page
-![Portfolio Page](./readme/screencapture-localhost-2368-tag-portfolio-1478223530769.png)
+![Portfolio Page](https://github.com/kevinguebert/Kepler/blob/gh-pages/readme/screencapture-localhost-2368-acadia-1478224097857.png?raw=true)
 
 
 
