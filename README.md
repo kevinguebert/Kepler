@@ -24,6 +24,11 @@ Kepler is a Ghost theme built off of the default Ghost theme, [Casper](https://g
 1. Create a tag called **Featured**
 2. Create a new post, tag it with **Featured** - note, it looks best with an image!	
 
+###Add Social Media
+
+1. Head over to the General section of your blog to add your Facebook and Twitter urls
+2. Your website will now have the icons in the footer!
+
 ###Enable Disqus Support
 
 1. Create your disqus account by following these instructions: [http://academy.ghost.org/adding-disqus-to-your-ghost-blog/](http://academy.ghost.org/adding-disqus-to-your-ghost-blog/)

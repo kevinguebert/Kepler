@@ -41,6 +41,14 @@
         <div class="two-tag-block">
             <footer class="site-footer clearfix">
                 <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}} | Proudly published with <a href="https://ghost.org">Ghost</a>. Built using the Kepler theme.</section>
+                <section class="poweredby">
+                {{#if twitter}}
+                  <a href="{{twitter_url}}"><i class="fa fa-twitter fa-3x"></i></a>
+                {{/if}}
+                {{#if facebook}}
+                  <a href="{{facebook_url}}"><i class="fa fa-facebook fa-3x"></i></a>
+                {{/if}}
+                </section>
             </footer>
         </div>
 
