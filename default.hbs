@@ -8,12 +8,7 @@
     {{! Page Meta }}
     <title>{{meta_title}}</title>
     <meta name="title" content="{{meta_title}} {{@blog.title}}" />
-  	{{#if post}}
-  		<meta name="description" content="{{#post}}{{excerpt words="50"}}
-      {{/post}}" />
-    {{else}}
-        <meta name="description" content="{{meta_description}}" />
-    {{/if}}
+    <meta name="description" content="{{meta_description}}" />
     <meta name="keywords" content="{{meta_description}}" />
 
     <meta name="HandheldFriendly" content="True" />
