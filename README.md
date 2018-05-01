@@ -1,84 +1,66 @@
-# Kepler
+# Casper
 
-Welcome to Kepler!
+The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper. If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.
 
-Kepler is a Ghost theme built off of the default Ghost theme, [Casper](https://github.com/TryGhost/Casper/releases). Built around large front page images and the ability to have portfolio items, Kepler is fast, responsive, and can be used in a wide variety of situations.
+&nbsp;
 
+![screenshot-desktop](https://user-images.githubusercontent.com/120485/27221326-1e31d326-5280-11e7-866d-82d550a7683b.jpg)
 
-## Installation & Instruction
+&nbsp;
 
-1. [Download the zip file of the latest release.](https://github.com/kevinguebert/Kepler/releases/tag/0.1.0)
-2. Go to your Ghost Admin -> Settings -> General
-3. Scroll to the very bottom where it says "Themes" and click "Upload a theme"
-4. Drag the downloaded zip folder from step 1 to upload
+# First time using a Ghost theme?
 
-### Create "Portfolio" Page
+Ghost uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes.
 
-1. Create a tag called **Portfolio**
-2. Add that tag to the navigation under Ghost Admin -> Settings -> Navigation
-	(Note, the tag will be `../tag/portfolio`
-3. Create a new post and add the tag of **Portfolio**
+We've documented our default theme pretty heavily so that it should be fairly easy to work out what's going on just by reading the code and the comments. Once you feel comfortable with how everything works, we also have full [theme API documentation](https://themes.ghost.org) which explains every possible Handlebars helper and template.
 
-### Add a Featured Project
+**The main files are:**
 
-1. Create a tag called **Featured**
-2. Create a new post, tag it with **Featured** - note, it looks best with an image!
+- `default.hbs` - The main template file
+- `index.hbs` - Used for the home page
+- `post.hbs` - Used for individual posts
+- `page.hbs` - Used for individual pages
+- `tag.hbs` - Used for tag archives
+- `author.hbs` - Used for author archives
 
-### Add Social Media
+One really neat trick is that you can also create custom one-off templates just by adding the slug of a page to a template file. For example:
 
-1. Head over to the General section of your blog to add your Facebook and Twitter urls
-2. Your website will now have the icons in the footer!
-
-### Enable Disqus Support
-
-1. Create your disqus account by following these instructions: [http://academy.ghost.org/adding-disqus-to-your-ghost-blog/](http://academy.ghost.org/adding-disqus-to-your-ghost-blog/)
-2. Copy the `s.src` url and go to `post.hbs` and add it in the [disqus section](https://github.com/kevinguebert/Kepler/blob/master/post.hbs#L46)
-3. Copy the same url and go to `default.hbs` and update the `script` url [found here](https://github.com/kevinguebert/Kepler/blob/master/default.hbs#L55)
-
-### Enable Subscribers
-
-1. Head over to the Labs section of your blog and at the very bottom, enable subscribers to your website.
-2. Kepler automatically comes with a subscription page, so now just enjoy!
-
-## Images
-
-#### Homepage
-![Full Screen](https://github.com/kevinguebert/Kepler/blob/gh-pages/readme/screencapture-localhost-2368-1478223420254.png?raw=true)
-
-#### Post Page
-![Post Page](https://github.com/kevinguebert/Kepler/blob/gh-pages/readme/screencapture-localhost-2368-acadia-1478223454551.png?raw=true)
-
-#### Portfolio Page
-![Portfolio Page](https://github.com/kevinguebert/Kepler/blob/gh-pages/readme/screencapture-localhost-2368-acadia-1478224097857.png?raw=true)
+- `page-about.hbs` - Custom template for the `/about/` page
+- `tag-news.hbs` - Custom template for `/tag/news/` archive
+- `author-ali.hbs` - Custom template for `/author/ali/` archive
 
 
+# Development
+
+Casper styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need Node and Gulp installed globally. After that, from the theme's root directory:
+
+```bash
+$ yarn install
+$ yarn dev
+```
+
+Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
+
+The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which you can then upload to your site.
+
+```bash
+$ yarn zip
+```
+
+# PostCSS Features Used
+
+- Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
+- Variables - Simple pure CSS variables
+- [Color Function](https://github.com/postcss/postcss-color-function)
 
 
+# SVG Icons
 
------
+Casper uses inline SVG icons, included via Handlebars partials. You can find all icons inside `/partials/icons`. To use an icon just include the name of the relevant file, eg. To include the SVG icon in `/partials/icons/rss.hbs` - use `{{> "icons/rss"}}`.
 
-#### Notes & Resources
+You can add your own SVG icons in the same manner.
 
-This theme was built upon the original Ghost Casper theme and is a modifed version. I do not claim to have created this fully on my own and I am opening it up for others to use with no liability on myself.
 
-MIT License
+# Copyright & License
 
-Copyright (c) 2016 Kevin Guebert
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Copyright (c) 2013-2018 Ghost Foundation - Released under the [MIT license](LICENSE).
