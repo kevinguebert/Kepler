@@ -5,12 +5,13 @@ into the {body} of the default.hbs template --}}
 {{!-- The big featured header, it uses blog cover image as a BG if available --}}
 {{#foreach posts limit="1"}}
 	<header class="site-header outer {{#if feature_image}}" style="background-image: url({{feature_image}}){{else}}no-cover{{/if}}">
-		<div class="inner">
+    <div class="image-overlay"></div>
+		<div class="inner main-post-container">
 			{{> "site-nav"}}
 			<div class="site-header-content">
-                <h2 class="">{{title}}</h2>
-                <p>{{excerpt words="33"}}</p>
-			</div>
+        <h2 class="main-post-title">{{title}}</h2>
+        <p>{{excerpt words="33"}}</p>
+      </div>
 		</div>
 	</header>
 {{/foreach}}
